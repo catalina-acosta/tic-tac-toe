@@ -27,7 +27,7 @@ table {
     height: auto;
     aspect-ratio: 1; /* Ensures the table is a square */
     table-layout: fixed;
-    border: none; /* Removes the outer border */
+    border: hidden; /* Hiddes the outer border and take precedence */
 }
 
 td {
