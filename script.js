@@ -64,10 +64,14 @@ function handleClick(index) {
         // Check for winner after each click
         const winner = checkWinner();
         if (winner) {
-            alert(`${winner} wins!`); // Alert when there is a winner
+            // Trigger the line drawing after the last symbol is placed
+            setTimeout(() => {
+                alert(`${winner} wins!`); // Alert when there is a winner
+            }, 700); // Delay to make sure the line is drawn before alert
         }
     }
 }
+
 
 function checkWinner() {
     const winningCombinations = [
@@ -193,4 +197,12 @@ function drawWinningLine(combination) {
     setTimeout(() => {
         line.style.width = `${lineLength}px`;
     }, 100); // Delay to ensure styles are applied
+}
+
+function newGame() {
+    for (let index = 0; index < fields.length; index++) {
+        fields[index] = null;
+    }
+
+    render();
 }
