@@ -18,7 +18,6 @@ h1 {
 }
 
 /* Table Styles */
-/* Table Styles */
 table {
     border-collapse: collapse;
     margin: 0 auto;
@@ -27,7 +26,7 @@ table {
     height: auto;
     aspect-ratio: 1; /* Ensures the table is a square */
     table-layout: fixed;
-    border: hidden; /* Hiddes the outer border and take precedence */
+    border: hidden; /* Hiddes the outer border and take precedence over all conflicting borders */
 }
 
 td {
